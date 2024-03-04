@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      
+      background-size: cover;
+      background-image: url("bg.jpg");
+    }
+
+    .card {
+      margin-top: 100px;
+    }
+    h3
+    {
+        text-align: center;
+    }
+    .form-group label {
+        font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-left h-100">
+      <div class="col-12 col-sm-8 col-md-6 col-xl-5">
+        <div class="card">
+          <div class="card-body p-5">
+            <h3 class="card-title">Welcome back!</h3>
+      
+            <center><p>A step ahead to your dreams..!</p></center>
+            <form>
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <div class="input-group">
+                  <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+                  <div class="input-group-append">
+                    <span class="input-group-text">
+                      <i class="fa fa-eye" id="togglePassword"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="rememberMe">
+                  <label class="form-check-label" for="rememberMe">Remember me</label>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-md btn-block text-white" style="background-color: #820263;">Login</button>
+              <div class="text-center mt-3">
+                <a href="#" class="text-danger">Forgot password?</a>
+              </div>
+              <hr>
+              <div class="text-center">
+                <p>Or sign in with:</p>
+                <div class="d-flex justify-content-center">
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fa-brands fa-google" style="color: #820263;"></i>
+                  </button>
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fa-brands fa-facebook" style="color: #820263;"></i>
+                  </button>
+
+                  <button type="button" class="btn btn-link btn-floating mx-1" style="color: #820263;">
+                    <i class="fa-brands fa-github"></i>
+                  </button>
+                </div>
+              </div><br>
+            
+            
+              <div class="text-center">
+                <p>Don't have an account? <a href="#" class="text-danger">Register</a></p>
+                <hr>
+                <p>&copy; 2023 Your Enhancement Website. All rights reserved.</p>
+               
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('#password');
+
+    togglePassword.addEventListener('click', function() {
+      const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+      password.setAttribute('type', type);
+      this.classList.toggle('fa-eye-slash');
+    });
+  </script>
+</body>
+
+</html>
